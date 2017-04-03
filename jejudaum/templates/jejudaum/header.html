@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>jeju daum</title>
+  </head>
+  <link rel="stylesheet" href="{% static 'css/gridsystem.css' %}">
+  <style media="screen">
+  header {
+    width: 100%;
+    background-color: rgb(236, 236, 236);
+    background-image: linear-gradient(to bottom, rgb(220, 220, 220) 0,rgb(240, 240, 240) 100%);
+    border: 1px solid rgb(230, 230, 230);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.25), 0 1px 2px rgba(0,0,0,.05);
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  #search input{
+    border: none;
+    border-radius: 15px;
+    border: 1px solid #e6e6e6;
+    height: 30px;
+    background-image: url("{% static 'img/magnifier-tool.png' %}");
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 0px 12px 25px;
+    font-size: 12px;
+  }
+
+  #search input:focus {
+    border: 0px;
+  }
+
+  .list-img{
+    background-image: url({% static 'img/list-menu.png' %});
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+  }
+
+  .side-menu{
+  width: 300px;
+  position: fixed;
+  right: -300px;
+  top: 0px;
+  height: 100vh;
+  z-index: 100;
+  background-color: rgb(230, 230, 230);
+  transition: all 0.3s ease-in-out;
+}
+
+.side-menu.on {
+  right: 0;
+}
+
+.side-menu-top{
+  height: 59px;
+  background-color: rgb(230, 230, 230);
+
+}
+
+.side-items{
+  padding-top: 20px;
+  background-color: white;
+  padding-left: 0;
+}
+
+.side-item{
+  display: flex;
+  height: 59px;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.small-items{
+  margin-top: 400px;
+  display: flex;
+  justify-content: space-around;
+  height: 59px;
+  margin-top: 70%;
+  background-color: white;
+  align-items: center;
+  padding-left: 0;
+}
+
+.line{
+  border-top: 1px solid rgb(225, 225, 225);
+  border-bottom: 1px solid rgb(225, 225, 225);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0,0,0,0);
+  transition: all 0.3s ease-in-out;
+}
+.overlay.on {
+  z-index: 10;
+  background-color: rgba(0,0,0,0.5)
+}
+
+
+  </style>
+  <body>
+    <header>
+      <nav class="row">
+        <h1 class="main-logo col-lg-2"><a href="#">우리</a></h1>
+        <form method="get" class="col-lg-5 push-lg-5" action="/search" id="search">
+          <input name="q" type="text" size="40" />
+        </form>
+        <ul class="col-lg-1 push-lg-10">
+          <li><a href="#"><span class="list-img"></span></a></li>
+        </ul>
+      </nav>
+
+      <aside class="side-menu" id="side_menu">
+        <div class="side-menu-top">
+
+          <span class="list-img close-btn"></span>
+        </div>
+
+        <ul class="side-items line">
+          <li class="side-item"><a href="#">뭐먹?</a></li>
+          <li class="side-item"><a href="#">하우스</a></li>
+          <li class="side-item"><a href="#">중도</a></li>
+          <li class="side-item"><a href="#">순환</a></li>
+        </ul>
+        <ul class="small-items line">
+          <li class="small-item"><a href="#">로그인</a></li>
+          <li class="small-item"><a href="#">회원가입</a></li>
+          <li class="small-item"><a href="#">건의</a></li>
+        </ul>
+      </aside>
+      <div class="overlay" aria-hidden="true"></div>
+    </header>
+  </body>
+
+  <script type="text/javascript">
+  var side = document.getElementsByClassName('list-img').item(0);
+  var closeBtn = document.querySelector('.close-btn');
+  var content = document.getElementById('side_menu');
+  var overlay = document.querySelector('.overlay');
+
+  function toggleSideBar() {
+    content.classList.toggle('on');
+    overlay.classList.toggle('on');
+  }
+
+  side.addEventListener('click', toggleSideBar);
+  closeBtn.addEventListener('click', toggleSideBar);
+  overlay.addEventListener('click', toggleSideBar);
+  </script>
+</html>

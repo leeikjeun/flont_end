@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: inherit; /*자신의 부모의 컬러값을 가지고옴*/
+  }
+
+ul,li{
+  list-style:none;
+}
+
+.row::after{
+  content: '';
+  display: block;
+  clear: left;
+}
+
+@media screen and (min-width:961px) {
+  .container {
+    width: 960px;
+    margin: 0 auto;
+  }
+
+  [class*='col-lg-'] {
+    float: left;
+    margin: 0 10px;
+  }
+
+  [class*='push-lg']{
+    position: relative;
+  }
+
+  .col-lg-1{width:60px;}
+  .col-lg-2{width: 140px;}
+  .col-lg-3{width: 220px;}
+  .col-lg-4{width: 300px;}
+  .col-lg-5{width: 380px;}
+  .col-lg-6{width: 460px;}
+  .col-lg-7{width: 540px;}
+  .col-lg-8{width: 620px;}
+  .col-lg-9{width: 700px;}
+  .col-lg-10{width: 780px;}
+  .col-lg-11{width: 860px;}
+  .col-lg-12{width: 940px;}
+
+  .push-lg-1{left:60px;}
+  .push-lg-2{left: 140px;}
+  .push-lg-3{left: 220px;}
+  .push-lg-4{left: 300px;}
+  .push-lg-5{left: 380px;}
+  .push-lg-6{left: 460px;}
+  .push-lg-7{left: 540px;}
+  .push-lg-8{left: 620px;}
+  .push-lg-9{left: 700px;}
+  .push-lg-10{left: 780px;}
+  .push-lg-11{left: 860px;}
+  .push-lg-12{left: 940px;}
+}
+
+@media screen and (min-width:768px) and (max-width:960px) {
+  .container {
+    width: 100%;
+
+  }
+
+  [class*='col-md-'] {
+    float: left;
+    padding: 0 10px;
+  }
+
+  [class*='push-md-']{
+    position: relative;
+  }
+  .col-md-1 { width: 8.33%; }
+  .col-md-2 { width: 16.67%; }
+  .col-md-3 { width: 25%; }
+  .col-md-4 { width: 33.33%; }
+  .col-md-5 { width: 41.67%; }
+  .col-md-6 { width: 50%; }
+  .col-md-7 { width: 58.33%; }
+  .col-md-8 { width: 66.67%; }
+  .col-md-9 { width: 75%; }
+  .col-md-10 { width: 83.33%; }
+  .col-md-11 { width: 91.67%; }
+  .col-md-12 { width: 100%; }
+
+
+  .push-md-1 { left: 8.33%; }
+  .push-md-2 { left: 16.67%; }
+  .push-md-3 { left: 25%; }
+  .push-md-4 { left: 33.33%; }
+  .push-md-5 { left: 41.67%; }
+  .push-md-6 { left: 50%; }
+  .push-md-7 { left: 58.33%; }
+  .push-md-8 { left: 66.67%; }
+  .push-md-9 { left: 75%; }
+  .push-md-10 {left: 83.33%; }
+  .push-md-11 {left: 91.67%; }
+  .push-md-12 {left: 100%; }
+}
+
+@media screen and (max-width:767px) {
+  .container{
+    width: 100%;
+  }
+
+  [class*='col-sm-'] {
+    float: left;
+    padding: 0 10px;
+  }
+
+  .col-sm-1{width: 25%;}
+  .col-sm-2{width: 50%;}
+  .col-sm-3{width: 75%;}
+  .col-sm-4{width: 100%;}
+
+  [class*='push-sm-']{
+    position: relative;
+  }
+
+  .push-sm-1 {left : 25%;}
+  .push-sm-2 {left : 50%;}
+  .push-sm-3 {left : 75%;}
+
+
+}
