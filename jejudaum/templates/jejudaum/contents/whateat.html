@@ -1,47 +1,8 @@
 {% extends 'jejudaum/header.html' %}
 {% load staticfiles %}
 {% block content %}
-<style media="screen">
-  section{
-    text-align: center;
-    font-size: 20px;
-  }
-
-  .side-header{
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-  }
-
-  .side-title-img{
-    display: block;
-  }
-
-  .side-title-img img{
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
-    border: 1px solid black;
-    border-radius: 1000px;
-    overflow: hidden;
-  }
-
-  .choice-list{
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-
-  .restaurant-list{
-    margin-top: 20px;
-  }
-
-  .restaurant-list li{
-    padding: 20px 0;
-  }
-</style>
-
+<link rel="stylesheet" href="{% static 'css/contents/sideheader.css' %}">
+<link rel="stylesheet" href="{% static 'css/contents/whateat.css' %}">
 <section>
   <h2 class="sr-only">뭐먹을까?</h2>
   <div class="container">

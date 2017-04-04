@@ -6,6 +6,8 @@ from django.http import HttpResponse
 def index(request) :
     return render(request, 'jejudaum/contents/index.html' , {})
 
-
 def whatEat(request) :
     return render(request, 'jejudaum/contents/whateat.html' , {})
+
+def houseNet(request) :
+    return render(request, 'jejudaum/contents/housenet.html', {})

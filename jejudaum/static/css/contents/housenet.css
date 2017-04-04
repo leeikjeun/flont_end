@@ -1,0 +1,83 @@
+section{
+  text-align: center;
+}
+
+.btn-box{
+  display: flex;
+  justify-content: center;
+}
+
+.btn{
+  margin: 20px 0;
+  border: 1px solid blue;
+  color: blue;
+  transition: all 0.3s ease-in-out;
+}
+
+.map-btn{
+  margin-right: 0;
+  border-radius: 10px 0 0 10px;
+}
+
+.list-btn{
+  margin-left: 0;
+  border-left: 0;
+  border-radius: 0 10px 10px 0;
+}
+
+.map-btn.on{
+  background-color: blue;
+  color: white;
+}
+
+.list-btn.on{
+  background-color: blue;
+  color: white;
+}
+
+.house-map{
+  height: 400px;
+  background-color: black;
+}
+
+.house-list{
+  display: none;
+  text-align: left;
+}
+
+.house-items{
+  border-top: 1px solid rgb(240,240,240);
+}
+
+.house-item{
+  padding: 10px 0;
+  border-bottom: 1px solid rgb(240,240,240);
+  transition: all 0.3 ease-in-out;
+}
+
+.house-item:hover{
+  background-color: rgb(230,230,230);
+}
+
+.house-item::after{
+  content: "";
+  display: block;
+  clear: left;
+}
+
+.house-img{
+  height: 100px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.page-nav{
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.page-num{
+  width: 10px;
+  margin: 0 5px;
+}

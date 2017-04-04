@@ -1,0 +1,43 @@
+{% extends 'jejudaum/header.html' %}
+{% load staticfiles %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/contents/sideheader.css' %}">
+<link rel="stylesheet" href="{% static 'css/contents/housenet.css' %}">
+<section>
+  <div class="container">
+    <h2 class="sr-only">하우스넷</h2>
+    <div class="row">
+      <div class="side-header">
+        <a class="side-title-img col-lg-2" href="{% url 'housenet' %}"><img src="{% static 'img/house.png' %}" alt="food photo"></a>
+      </div>
+    </div>
+    <div class="row">
+      <ul class="btn-box">
+        <li class="btn map-btn on col-lg-1"><a href="#">map</a></li>
+        <li class="btn list-btn col-lg-1"><a href="#">list</a></li>
+      </ul>
+    </div>
+    <div class="row">
+      <div class="house-map col-lg-12">
+        <!-- 구글맵 일단 불러옴 데이터 뿌리는 건 내가 api찾아서 해야하는거고 그 데이터 주세요 님아 ㅋ -->
+      </div>
+      <div class="house-list col-lg-12">
+        <ul class="house-items">
+          <!-- 그림 이미지 뿌려야되 정보도 각각 뿌려야함 -->
+          <li class="house-item col-lg-12"><a href="#"><img class="col-lg-2 house-img" src="{% static 'img/house.png'%}" alt="house img"><h3 class="col-lg-9">집 이름</h3><p class="col-lg-9">집 설명</p></a></li>
+          <li class="house-item col-lg-12"><a href="#"><img class="col-lg-2 house-img" src="{% static 'img/house.png'%}" alt="house img"><h3 class="col-lg-9">집 이름</h3><p class="col-lg-9">집 설명</p></a></li>
+          <li class="house-item col-lg-12"><a href="#"><img class="col-lg-2 house-img" src="{% static 'img/house.png'%}" alt="house img"><h3 class="col-lg-9">집 이름</h3><p class="col-lg-9">집 설명</p></a></li>
+          <li class="house-item col-lg-12"><a href="#"><img class="col-lg-2 house-img" src="{% static 'img/house.png'%}" alt="house img"><h3 class="col-lg-9">집 이름</h3><p class="col-lg-9">집 설명</p></a></li>
+          <li class="house-item col-lg-12"><a href="#"><img class="col-lg-2 house-img" src="{% static 'img/house.png'%}" alt="house img"><h3 class="col-lg-9">집 이름</h3><p class="col-lg-9">집 설명</p></a></li>
+        </ul>
+        <ul class="page-nav col-lg-12">
+          <li class="page-num"><a href="#">1</a></li>
+          <li class="page-num"><a href="#">2</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnjAkI-_wKD_5MHS90DK2KW682HJz-6Bs&callback=initMap" async defer></script>
+<script type="text/javascript" src="{% static 'js/contents/housenet.js' %}"></script>
+{% endblock content %}
