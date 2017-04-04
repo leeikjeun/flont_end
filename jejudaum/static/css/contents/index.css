@@ -2,10 +2,6 @@ section{
   height: 100vh;
 }
 
-.sr-only{
-  font-size: 0;
-}
-
 .content-menu{
   margin-top: 40px;
 }
