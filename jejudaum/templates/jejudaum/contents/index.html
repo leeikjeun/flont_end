@@ -1,1 +1,40 @@
+{% extends 'jejudaum/header.html' %}
+{% load staticfiles %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/contents/index.css' %}">
+<section>
+  <h2 class="sr-only"> main page</h2>
+  <div class="container">
+    <div class="row">
+      <div class="content-menu col-lg-6">
+        <a href="#" class="animation-box">
+          <img class="script_class_img" src="{% static 'img/food.png' %}" alt="food photo">
+          <h3 class="hide-text">뭐 먹을까?</h3>
+        </a>
+      </div>
+      <div class="content-menu col-lg-6">
+        <a href="#" class="animation-box">
+          <img class="script_class_img" src="{% static 'img/house.png' %}" alt="house photo">
+          <h3 class="hide-text">하우스 넷</h3>
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="content-menu col-lg-6">
+        <a href="#" class="animation-box">
+          <img class="script_class_img" src="{% static 'img/bus.png' %}" alt="bus photo">
+          <h3 class="hide-text">버스 노선</h3>
+        </a>
+      </div>
+      <div class="content-menu col-lg-6">
+        <a href="#" class="animation-box">
+          <img class="script_class_img" src="{% static 'img/seat.png' %}" alt="seat photo">
+          <h3 class="hide-text">중도 좌석</h3>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<script type="text/javascript" src="{% static 'js/contents/index.js' %}"></script>
 
+{% endblock content %}
