@@ -8,7 +8,7 @@ a{
     color: inherit; /*자신의 부모의 컬러값을 가지고옴*/
   }
 
-ul,li{
+ol,ul,li{
   list-style:none;
   padding: 0;
 }

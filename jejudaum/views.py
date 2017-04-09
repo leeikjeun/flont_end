@@ -12,5 +12,11 @@ def whatEat(request) :
 def houseNet(request) :
     return render(request, 'jejudaum/contents/housenet.html', {})
 
+def houseItemClick(request) :
+    return render(request, 'jejudaum/contents/house/houseitemclick.html', {})
+
 def busLine(request) :
     return render(request, 'jejudaum/contents/busline.html', {})
+
+def logIn(request) :
+    return render(request, 'jejudaum/contents/log/login.html', {})

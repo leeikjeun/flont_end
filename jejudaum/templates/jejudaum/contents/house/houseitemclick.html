@@ -2,16 +2,93 @@
 {% load staticfiles %}
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/contents/sideheader.css' %}">
+<style media="screen">
+  dt, dd{
+    padding: 20px 0;
+  }
+
+  .room-lists{
+    margin: 20px 0;
+  }
+</style>
 <section>
   <div class="container">
     <h2 class="sr-only">하우스넷</h2>
     <div class="row">
       <div class="side-header">
-        <a class="side-title-img col-lg-2" href="{% url 'housenet' %}"><img src="{% static 'img/house.png' %}" alt="food photo"></a>
+        <a class="side-title-img col-lg-2" href="{% url 'housenet' %}"><img src="{% static 'img/house.png' %}" alt="house photo"></a>
       </div>
     </div>
     <div class="row">
-      
+      <ol class="room-lists">
+        <li class="room-list">
+          <a href="#">
+            <dl class="">
+              <div class="row">
+                <dt class="col-lg-2">
+                  <h4> 보증금 </h4>
+                  <h4> 월세 </h4>
+                  <h4> 등록번호 </h4>
+                </dt>
+                <dd class="col-lg-4">
+                  <p><strong>500</strong> 만원</p>
+                  <p><strong>45</strong> 만원</p>
+                  <p> 7784070 </p>
+                </dd>
+                <dt class="col-lg-2">
+                  <h4> 방 구조 </h4>
+                  <h4> 건물형태 </h4>
+                  <h4> 층/건물층수 </h4>
+                </dt>
+                <dd class="col-lg-4">
+                  <p> 원룸(분리형) </p>
+                  <p> 다세대건물 </p>
+                  <p> 3층/5층 </p>
+                </dd>
+              </div>
+              <div class="row">
+                <dt class="col-lg-2">
+                  <h4> 관리비 </h4>
+                  <h4> 관리비 포함항목 </h4>
+                  <h4> 크기 </h4>
+                </dt>
+                <dd class="col-lg-4">
+                  <p> 5만원 </p>
+                  <p> 인터넷 TV </p>
+                  <p> 전용면적 23.14m (7P) </p>
+                </dd>
+                <dt class="col-lg-2">
+                  <h3> 주차 </h3>
+                  <h3> 엘레베이터 </h3>
+                </dt>
+                <dd class="col-lg-4">
+                  <p> 가능 </p>
+                  <p> 있음 </p>
+                </dd>
+              </div>
+              <div class="row">
+                <dt class="col-lg-2">
+                  <h3> 옵션 </h3>
+                </dt>
+                <dd class="col-lg-10">
+                  <p> 에어컨, 냉장고, 세탁기, 인덕선 </p>
+                </dd>
+              </div>
+              <div class="row">
+                <dt>
+                  <h3 class="col-lg-2"> 입주 가능일 </h3>
+                </dt>
+                <dd>
+                  <p class="col-lg-10"> 날짜협의 </p>
+                </dd>
+              </div>
+            </dl>
+          </a>
+        </li>
+        <li class="room-list"></li>
+        <li class="room-list"></li>
+        <li class="room-list"></li>
+      </ol>
     </div>
   </div>
 </section>
