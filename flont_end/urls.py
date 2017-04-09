@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'^$', views.index , name = "index"),
     url(r'^whateat/$', views.whatEat , name = "whateat"),
     url(r'^housenet/$', views.houseNet , name = "housenet"),
+    url(r'^busline/$', views.busLine , name = "busline"),
 ]

@@ -11,3 +11,6 @@ def whatEat(request) :
 
 def houseNet(request) :
     return render(request, 'jejudaum/contents/housenet.html', {})
+
+def busLine(request) :
+    return render(request, 'jejudaum/contents/busline.html', {})

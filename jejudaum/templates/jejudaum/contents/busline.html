@@ -1,0 +1,126 @@
+{% extends 'jejudaum/header.html' %}
+{% load staticfiles %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/contents/sideheader.css' %}">
+<style media="screen">
+  section {
+    height: 100vh;
+  }
+
+  ol{
+    padding: 0;
+  }
+
+  .bus-map{
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    height: 400px;
+  }
+
+  /* 나중에 미디어 저야함 높이에 대한*/
+  .bus-map img{
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 400px;
+  }
+
+  .bus-map-click-postion{
+    position: absolute;
+    display: inline;
+    left: 18.5%;
+    top : 260px;
+  }
+
+  .bus-map-click-postion a{
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 1000px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .bus-map-click-postion a:hover{
+    background-color: blue;
+  }
+
+  .bus-route{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    display: none;
+  }
+
+  .a-lines{
+    margin-top: 10px;
+  }
+
+  .a-line{
+    padding: 10px 0;
+    border-top: 1px solid rgb(240,240,240);
+
+  }
+
+  .b-lines{
+    margin-top: 10px;
+  }
+
+  .b-line{
+    padding: 10px 0;
+    border-top: 1px solid rgb(240,240,240);
+  }
+</style>
+<section>
+  <div class="container">
+    <h2 class="sr-only">하우스넷</h2>
+    <div class="row">
+      <div class="side-header">
+        <a class="side-title-img col-lg-2" href="{% url 'busline' %}"><img src="{% static 'img/bus.png' %}" alt="food photo"></a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="bus-map col-lg-12">
+        <img class="col-lg-7" src="{% static 'img/busline.jpeg' %}" alt="jeju university bus map">
+        <span class="bus-map-click-postion btn1"><a href="#"></a></span>
+      </div>
+      <div class="bus-route">
+        <ul class="bus-times">
+          <!-- for문 돌려서 해야되는 구간 -->
+          <h2 class="col-lg-12">의학 전문 대학원</h2>
+          <ol class="a-lines col-lg-6">
+            <h3 class="a-line">A 구간</h3>
+            <li class="a-line">7:49</li>
+            <li class="a-line">8:09</li>
+            <li class="a-line">8:25</li>
+            <li class="a-line">8:41</li>
+          </ol>
+          <ol class="b-lines col-lg-6">
+            <h3 class="b-line">B 구간</h3>
+            <li class="b-line">7:55</li>
+            <li class="b-line">8:13</li>
+            <li class="b-line">8:29</li>
+            <li class="b-line">8:46</li>
+          </ol>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="text/javascript">
+  var btn = document.querySelector('.btn1');
+  var bus_map = document.querySelector('.bus-map');
+  var bus_route = document.querySelector('.bus-route');
+
+  btn.addEventListener('click', function(ev){
+    bus_map.style.display = 'none';
+    bus_route.style.display = 'block'
+  });
+
+</script>
+
+{% endblock content %}

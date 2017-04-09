@@ -1,0 +1,20 @@
+{% extends 'jejudaum/header.html' %}
+{% load staticfiles %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/contents/sideheader.css' %}">
+<section>
+  <div class="container">
+    <h2 class="sr-only">하우스넷</h2>
+    <div class="row">
+      <div class="side-header">
+        <a class="side-title-img col-lg-2" href="{% url 'housenet' %}"><img src="{% static 'img/house.png' %}" alt="food photo"></a>
+      </div>
+    </div>
+    <div class="row">
+      
+    </div>
+  </div>
+</section>
+
+
+{% endblock content %}
